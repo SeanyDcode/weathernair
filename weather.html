@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta -->
+        <meta charset="utf-8"/>
+        <meta content="initial-scale=1, width=device-width" name="viewport"/>
+
+        <!-- http://getbootstrap.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <!-- App's own CSS -->
+        <link href="/static/style.css" rel="stylesheet"/>
+
+        <!-- http://jquery.com/ -->
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+        <!-- http://getbootstrap.com/ -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- app's own JavaScript -->
+        <script src="/static/script.js"></script>
+
+        <script>window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function(f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));</script>
+
+        <title>Weather Test Page</title>
+    </head>
+    <body>
+        <main id="content">
+            <h1 class="display-1 text-center">SeanyDcode Weather n' Air</h1>
+            <h2 class="display-3 text-center text-muted">Advocate for Better Air</h2>
+            <div class="container" id="selection">
+                <div class="row">
+                    <div class="form-group col-md-4 col-sm-6 col-xs-8 col-md-offset-4 col-sm-offset-3 col-xs-offset-2">
+                        <select id="state-drop" class="form-control mx-auto"></select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4 col-sm-6 col-xs-8 col-md-offset-4 col-sm-offset-3 col-xs-offset-2">
+                        <select id="city-drop" class ="form-control"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="button-spot">
+                    <div class="row text-center" id="weather-button-spot"></div>
+            </div>
+
+            <div class="container" id="jumbo">
+                <h1 class="display-2 text-center">Current Conditions in:</h1>
+                <h2 class="display-1 text-center" id="location-head"></h2>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-center" id="weather"></div>
+                    <div class="col-md-6 col-sm-6 text-center" id="air-status">
+                        <div id="air-quality"></div>
+                        <div id="contact-button-spot"></div>
+                        <div id="gov-jumbo">
+                            <div id="governor"></div>
+                            <div id="tweet-button-spot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>Data provided for free by AirVisual.com and Google Civic Information API</footer>
+    </body>
+</html>
